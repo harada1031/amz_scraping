@@ -1,0 +1,30 @@
+- the script should scrape data link in image scrape.png and save the data in mysql table
+		example links: 	https://www.amazon.de/sp?ie=UTF8&seller=A1K6TAQBRYGCP&asin=B097TTLDSP&ref_=dp_merchant_link&isAmazonFulfilled=1
+				https://www.amazon.de/sp?ie=UTF8&seller=A2YFS0NG9CL2RQ&asin=B06WVD8C6H&ref_=dp_merchant_link&isAmazonFulfilled=1
+
+- exclude chinese sellers from saving
+- the script should run with a random sleep between 55 and 165 seconds becourse amazon is blocking ip’s
+
+- also scrape new product links from product page and store the links in mysql table for later use
+		example link:	https://www.amazon.de/dp/B097TTLDSP/ref=sspa_dk_detail_0?pf_rd_p=ae2317a0-2175-4285-af64-66539858231f&pf_rd_r=3DTVE93WZ4VWH9TNR3P4&pd_rd_wg=z3NVG&pd_rd_w=FdyMs&content-id=amzn1.sym.ae2317a0-2175-4285-af64-66539858231f&pd_rd_r=2e780df6-7700-47d0-b4b4-1822c02be39b&s=drugstore&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1
+
+Your server creditals:
+
+
+IPv4	49.13.113.154
+IPv6	2a01:4f8:c013:2d9::/64
+Benutzer	root
+Passwort	RCiANCWsEdasnpVUkjhx
+
+
+The bst way will be that you create a mysql table with product detail pages links, to start the script.
+
+make it with 3 colums, id, link and a boolean that is be set to “1” if the link is already be searched by the script
+
+on the product detail pages you will get more product links to save in this table and also the seller detaild page link
+
+see: image1.png
+
+on the seller page you scrape the green marked information like shown in scrape.png expect chinese seller
+
+
